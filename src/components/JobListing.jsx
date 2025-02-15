@@ -1,6 +1,15 @@
+import { useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import LinkButton from "../components/LinkButton";
 const JobListing = ({ jobList }) => {
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
+  //shortening D text
+  let description = jobList.description;
+  if (!showFullDescription) {
+    description = description.substring(0, 100) + "...";
+  }
+
   return (
     <div
       aria-label="job listing card"
@@ -25,7 +34,15 @@ const JobListing = ({ jobList }) => {
             aria-label="paragraph & prize wrapper"
           >
             {/* the paragraph */}
-            <p className="w-full h-auto info-text">{jobList.description}</p>
+            <p className="w-full h-auto info-text">{description}</p>
+
+            <button
+              className="font-workSans text-sm bg-slate-200 px-4 py-2 font-medium rounded-sm hover:bg-blue-500 hover:text-white transition-all duration-500 ease-in-out"
+              onClick={() => setShowFullDescription((prevState) => !prevState)}
+            >
+              {showFullDescription ? "Less" : "More"}
+            </button>
+
             {/* the prize */}
             <p className="text-sm font-medium"> {jobList.salary}</p>
           </div>
@@ -41,7 +58,7 @@ const JobListing = ({ jobList }) => {
               aria-label="the location text & location icon wrapper"
             >
               {/* the location */}
-              <FaMapMarkerAlt className="text-blue-500" />
+              <FaMapMarkerAlt className="text-red-700" />
               <p className="w-full h-auto text-red-700 font-medium text-sm">
                 {jobList.location}
               </p>

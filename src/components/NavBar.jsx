@@ -1,15 +1,14 @@
-// import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import LinkButton from "./LinkButton";
 import { FaBars } from "react-icons/fa";
-import { navLinks } from "../../constants/navlinks";
+import { navLinks } from "../constants/navlinks";
 
 const NavBar = () => {
   return (
     <nav className="bg-blue-700 h-[60px] flex items-center border-blue-500 w-full fixed top-0 left-0 right-0 z-50">
       {/* the nav container */}
-      <header className="px-24 max-lg:px-6 max-sm:px-3 border-2 border-red-500 flex justify-between items-center w-full h-auto">
+      <header className="px-24 max-lg:px-6 max-sm:px-3 flex justify-between items-center w-full h-auto">
         <Link className="w-fit h-auto flex items-center space-x-1">
           <div aria-label="the logo container" className="w-[40px] h-[40px]">
             <img src={logo} alt="react-jobs-logo" />
@@ -21,14 +20,14 @@ const NavBar = () => {
 
         <span
           aria-label="nav links container"
-          className="flex space-x-5 border-2 border-green-500 flex-1 justify-center items-center max-sm:justify-end max-sm:pr-4 w-full"
+          className="flex space-x-9 flex-1 justify-center items-center max-sm:justify-end max-sm:pr-4 w-full"
         >
           {/* the nav links */}
           {/* home link */}
           {navLinks.length &&
             navLinks.map((link) => (
               <div
-                className="w-fit h-auto border-2 border-orange-500 flex justify-center space-x-5 items-center max-sm:hidden"
+                className="w-fit h-auto flex justify-center space-x-5 items-center max-sm:hidden"
                 key={link.label}
               >
                 <LinkButton
