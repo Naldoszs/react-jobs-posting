@@ -3,13 +3,14 @@ import logo from "../assets/images/logo.png";
 import LinkButton from "./LinkButton";
 import { FaBars } from "react-icons/fa";
 import { navLinks } from "../constants/navlinks";
+import NavLinkButton from "./NavLinkButton";
 
 const NavBar = () => {
   return (
     <nav className="bg-blue-700 h-[60px] flex items-center border-blue-500 w-full fixed top-0 left-0 right-0 z-50">
       {/* the nav container */}
       <header className="px-24 max-lg:px-6 max-sm:px-3 flex justify-between items-center w-full h-auto">
-        <Link className="w-fit h-auto flex items-center space-x-1">
+        <Link to="/" className="w-fit h-auto flex items-center space-x-1">
           <div aria-label="the logo container" className="w-[40px] h-[40px]">
             <img src={logo} alt="react-jobs-logo" />
           </div>
@@ -30,7 +31,7 @@ const NavBar = () => {
                 className="w-fit h-auto flex justify-center space-x-5 items-center max-sm:hidden"
                 key={link.label}
               >
-                <LinkButton
+                <NavLinkButton
                   fontWeight="font-medium"
                   text={link.label}
                   to={link.to}
@@ -40,6 +41,8 @@ const NavBar = () => {
                   paddingY="py-2"
                   hoverColor="hover:bg-purple-500"
                   hoverTextColor="hover:text-white"
+                  backgroundColor="bg-black"
+                  bgOpacity="bg-opacity-20"
                 />
               </div>
             ))}

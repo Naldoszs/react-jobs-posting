@@ -13,6 +13,7 @@ const Homecards = () => {
             buttonText="Browse jobs"
             bgColor="bg-blue-500"
             hoverColor="hover:bg-purple-500"
+            to="/jobs"
           />
         </Card>
         <Card bgColor="bg-purple-200">
@@ -22,6 +23,7 @@ const Homecards = () => {
             buttonText="Add job"
             bgColor="bg-purple-500"
             hoverColor="hover:bg-blue-500"
+            to="/add-job"
           />
         </Card>
       </div>

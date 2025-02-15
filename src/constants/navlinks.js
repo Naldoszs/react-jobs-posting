@@ -1,14 +1,14 @@
 export const navLinks = [
   {
     label: "Home",
-    to: "",
+    to: "/",
   },
   {
     label: "Jobs",
-    to: "",
+    to: "/jobs",
   },
   {
-    label: "None",
-    to: "",
+    label: "Add Job",
+    to: "/add-job",
   },
 ];

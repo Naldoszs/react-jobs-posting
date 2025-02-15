@@ -21,7 +21,7 @@ const JobListing = ({ jobList }) => {
       >
         {/* the header sub-section */}
         <header className="flex w-full h-auto flex-col font-workSans space-y-1">
-          <p className="w-full h-auto text-sm">{jobList.type}</p>
+          <p className="w-full h-auto text-sm opacity-60">{jobList.type}</p>
           <h4 className="text-xl font-semibold w-full h-auto">
             {jobList.title}
           </h4>
@@ -37,7 +37,7 @@ const JobListing = ({ jobList }) => {
             <p className="w-full h-auto info-text">{description}</p>
 
             <button
-              className="font-workSans text-sm bg-slate-200 px-4 py-2 font-medium rounded-sm hover:bg-blue-500 hover:text-white transition-all duration-500 ease-in-out"
+              className="font-workSans text-sm bg-purple-100 px-4 py-2 font-medium rounded-sm hover:bg-blue-500 hover:text-white transition-all duration-500 ease-in-out"
               onClick={() => setShowFullDescription((prevState) => !prevState)}
             >
               {showFullDescription ? "Less" : "More"}

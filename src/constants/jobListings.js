@@ -95,4 +95,164 @@ export const jobListings = [
       contactPhone: "555-555-5555",
     },
   },
+  {
+    id: "7",
+    title: "Senior JavaScript Engineer",
+    type: "Full-Time",
+    location: "San Francisco, CA",
+    description:
+      "We are looking for a skilled JavaScript Engineer with expertise in modern frameworks such as React and Vue.js. The ideal candidate should be passionate about building high-performance web applications.",
+    salary: "$110K - $120K / Year",
+    company: {
+      name: "TechNova Solutions",
+      description:
+        "TechNova Solutions is an industry leader in SaaS applications, specializing in scalable and secure web applications for global enterprises.",
+      contactEmail: "contact@technova.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "8",
+    title: "React UI Developer",
+    type: "Contract",
+    location: "Seattle, WA",
+    description:
+      "Exciting opportunity for a React UI Developer to work on a 6-month contract. Must have experience with Material UI, Tailwind CSS, and a solid understanding of responsive design principles.",
+    salary: "$60 - $80 / Hour",
+    company: {
+      name: "CloudLink Systems",
+      description:
+        "CloudLink Systems is a software consultancy firm focused on delivering cloud-based applications and digital transformation solutions.",
+      contactEmail: "info@cloudlink.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "9",
+    title: "Junior React Developer",
+    type: "Full-Time",
+    location: "Austin, TX",
+    description:
+      "Join a fast-growing startup as a Junior React Developer. Perfect for recent graduates or self-taught developers looking to grow their careers in front-end development.",
+    salary: "$60K - $70K / Year",
+    company: {
+      name: "InnoTech Labs",
+      description:
+        "InnoTech Labs is a startup accelerator focused on developing next-generation digital products using cutting-edge technologies.",
+      contactEmail: "jobs@innotechlabs.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "10",
+    title: "Lead Front-End Engineer",
+    type: "Full-Time",
+    location: "Los Angeles, CA",
+    description:
+      "We are seeking a Lead Front-End Engineer to manage a team of developers. Must have deep knowledge of React, TypeScript, and Next.js.",
+    salary: "$130K - $150K / Year",
+    company: {
+      name: "Skyline Digital",
+      description:
+        "Skyline Digital is a premier digital agency creating high-performance applications for global brands.",
+      contactEmail: "careers@skyline.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "11",
+    title: "React Developer (Remote)",
+    type: "Remote",
+    location: "Remote",
+    description:
+      "Work from anywhere as a React Developer on a variety of web and mobile applications. Must be comfortable with agile workflows and Git workflows.",
+    salary: "$85K - $95K / Year",
+    company: {
+      name: "DevRemote",
+      description:
+        "DevRemote specializes in remote work solutions, connecting developers with top companies worldwide.",
+      contactEmail: "hr@devremote.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "12",
+    title: "React Native Mobile Developer",
+    type: "Full-Time",
+    location: "Denver, CO",
+    description:
+      "Join our mobile development team and build React Native applications for iOS and Android. Experience with Expo and React Navigation is a plus.",
+    salary: "$95K - $110K / Year",
+    company: {
+      name: "MobilityWorks",
+      description:
+        "MobilityWorks is a mobile app development company focusing on cross-platform solutions for startups and enterprises.",
+      contactEmail: "careers@mobilityworks.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "13",
+    title: "React & Node.js Full-Stack Developer",
+    type: "Full-Time",
+    location: "Dallas, TX",
+    description:
+      "Looking for a full-stack developer with expertise in React, Node.js, and MongoDB. You will work on scalable applications for our growing platform.",
+    salary: "$100K - $115K / Year",
+    company: {
+      name: "CodeFusion Inc.",
+      description:
+        "CodeFusion is a software company developing SaaS products for enterprise clients around the world.",
+      contactEmail: "jobs@codefusion.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "14",
+    title: "React Developer - E-commerce",
+    type: "Full-Time",
+    location: "Chicago, IL",
+    description:
+      "Join our e-commerce development team to build and maintain high-performance online stores. Experience with Shopify or Magento is a plus.",
+    salary: "$90K - $105K / Year",
+    company: {
+      name: "ShopGenius",
+      description:
+        "ShopGenius provides custom e-commerce solutions for businesses looking to scale their online presence.",
+      contactEmail: "hiring@shopgenius.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "15",
+    title: "React Front-End Developer (Hybrid)",
+    type: "Hybrid",
+    location: "Philadelphia, PA",
+    description:
+      "This hybrid role requires working in the office 2 days per week. Looking for a front-end developer with experience in React, Tailwind CSS, and API integrations.",
+    salary: "$85K - $100K / Year",
+    company: {
+      name: "PixelForge",
+      description:
+        "PixelForge is a creative agency focused on designing and developing user-friendly web applications.",
+      contactEmail: "careers@pixelforge.com",
+      contactPhone: "555-555-5555",
+    },
+  },
+  {
+    id: "16",
+    title: "React Developer (Entry-Level)",
+    type: "Full-Time",
+    location: "Orlando, FL",
+    description:
+      "Entry-level React Developer role for candidates eager to work on real-world projects. Training and mentorship provided.",
+    salary: "$50K - $65K / Year",
+    company: {
+      name: "BrightPath Tech",
+      description:
+        "BrightPath Tech is an educational technology company focused on building innovative learning platforms.",
+      contactEmail: "hr@brightpathtech.com",
+      contactPhone: "555-555-5555",
+    },
+  },
 ];

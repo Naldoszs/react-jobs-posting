@@ -9,7 +9,7 @@ const HomePage = () => {
     <main className="min-h-[100vh] w-[100vw] flex flex-col justify-start items-start pt-[60px]">
       <Hero />
       <HomeCards />
-      <JobListings />
+      <JobListings isHome={true} />
       <ViewAllJobs />
     </main>
   );
