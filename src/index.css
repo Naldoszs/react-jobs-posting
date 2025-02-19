@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 /* @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -54,11 +58,11 @@
   }
 
   .info-text {
-    @apply font-montserrat text-slate-gray text-base leading-7;
+    @apply font-lato text-slate-gray text-base leading-7;
   }
 
   .info-text2 {
-    @apply font-montserrat text-white text-opacity-80 text-base leading-7;
+    @apply font-lato text-white text-opacity-80 text-base leading-7;
   }
 
   .padding-desktop {

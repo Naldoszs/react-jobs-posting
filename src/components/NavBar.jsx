@@ -14,14 +14,14 @@ const NavBar = () => {
           <div aria-label="the logo container" className="w-[40px] h-[40px]">
             <img src={logo} alt="react-jobs-logo" />
           </div>
-          <h3 className="text-3xl text-white font-semibold font-workSans">
+          <h3 className="text-3xl text-white font-semibold font-lato">
             React Jobs
           </h3>
         </Link>
 
         <span
           aria-label="nav links container"
-          className="flex space-x-9 flex-1 justify-center items-center max-sm:justify-end max-sm:pr-4 w-full"
+          className="flex space-x-9 flex-1 justify-center items-center max-sm:justify-end max-sm:pr-4 w-full relative"
         >
           {/* the nav links */}
           {/* home link */}

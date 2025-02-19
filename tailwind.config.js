@@ -15,8 +15,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        workSans: ["Work sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        merriweatherSans: ["Merriweather Sans", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
       colors: {
         primary: "#ECEEFF",

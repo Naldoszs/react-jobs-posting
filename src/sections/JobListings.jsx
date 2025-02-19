@@ -28,7 +28,7 @@ const JobListings = ({ isHome = false }) => {
     };
 
     // Adding a delay before fetching data
-    setTimeout(fetchJobs, 3000);
+    setTimeout(fetchJobs, 500);
   }, []);
 
   return (
@@ -55,9 +55,13 @@ const JobListings = ({ isHome = false }) => {
           aria-label="job listings overall container"
           className="w-full grid grid-cols-2 gap-3 h-auto items-start max-lg:grid-cols-1 justify-items-center p-4"
         >
-          {data.map((jobList) => (
-            <JobListing key={jobList.id} jobList={jobList} />
-          ))}
+          {data.length ? (
+            data.map((jobList) => (
+              <JobListing key={jobList.id} jobList={jobList} />
+            ))
+          ) : (
+            <p>No job to display</p>
+          )}
         </div>
       )}
     </section>

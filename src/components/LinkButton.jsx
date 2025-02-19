@@ -21,7 +21,7 @@ const LinkButton = ({
   return (
     <Link
       to={to}
-      className={`${borderWeight} ${borderColor} flex ${width} h-auto justify-center items-center ${paddingX}  ${paddingY} ${fontSize}  font-workSans ${fontWeight} ${borderRadius}  ${textColor} ${hoverColor} transition-all duration-500 ease-in-out ${marginTop} ${backgroundColor} ${hoverTextColor} ${padding}`}
+      className={`${borderWeight} ${borderColor} flex ${width} h-auto justify-center items-center ${paddingX}  ${paddingY} ${fontSize}  font-lato ${fontWeight} ${borderRadius}  ${textColor} ${hoverColor} transition-all duration-500 ease-in-out ${marginTop} ${backgroundColor} ${hoverTextColor} ${padding}`}
     >
       {text}
     </Link>

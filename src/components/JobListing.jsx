@@ -53,31 +53,38 @@ const JobListing = ({ jobList }) => {
             aria-label="the location & button wrapper"
           >
             {/* the location text & location icon wrapper */}
-            <div
-              className="w-full h-auto flex items-center space-x-1"
-              aria-label="the location text & location icon wrapper"
-            >
+            <div className="flex w-full justify-between h-auto items-center">
               {/* the location */}
-              <FaMapMarkerAlt className="text-red-700" />
-              <p className="w-full h-auto text-red-700 font-medium text-sm">
-                {jobList.location}
-              </p>
-            </div>
+              <div
+                className="w-full h-auto flex items-center space-x-1"
+                aria-label="the location text & location icon wrapper"
+              >
+                {/* the location and location btn */}
 
-            {/* the location button */}
-            <LinkButton
-              text="Read more"
-              textColor="text-white"
-              borderWeight="border-none"
-              width="w-full"
-              paddingY={"py-4"}
-              fontWeight="font-medium"
-              backgroundColor="bg-purple-500"
-              borderRadius="rounded-md"
-              fontSize="text-lg"
-              hoverColor="hover:bg-blue-500"
-              hoverTextColor="hover:text-white"
-            />
+                <FaMapMarkerAlt className="text-red-700" />
+                <p className="w-full h-auto text-red-700 font-medium text-sm">
+                  {jobList.location}
+                </p>
+              </div>
+
+              {/* the location button */}
+              <LinkButton
+                to={`/jobs/${jobList.id}`}
+                text="Read more"
+                textColor="text-white"
+                borderWeight="border-none"
+                width="w-[50%]"
+                // paddingY={"py-4"}
+                fontWeight="font-normal"
+                backgroundColor="bg-purple-500"
+                borderRadius="rounded-md"
+                fontSize="text-base"
+                hoverColor="hover:bg-blue-500"
+                hoverTextColor="hover:text-white"
+                padding="p-2"
+                paddingY={"p-1"}
+              />
+            </div>
           </div>
         </main>
       </div>

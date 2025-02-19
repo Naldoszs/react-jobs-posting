@@ -1,21 +1,26 @@
 import { useState } from "react";
 import apiRequest from "../utility/apiRequest";
-import { useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import Button from "../components/Button";
-import { FaPlus } from "react-icons/fa";
+import { FaPen } from "react-icons/fa";
 
-const AddJobPage = () => {
-  const apiUrl = "/api/jobListings";
-  const [title, setTitle] = useState("");
-  const [type, setType] = useState("Full-Time");
-  const [location, setLocation] = useState("");
-  const [description, setDescription] = useState("");
-  const [salary, setSalary] = useState("Under $50K");
-  const [companyName, setCompanyName] = useState("");
-  const [companyDescription, setCompanyDescription] = useState("");
-  const [contactEmail, setContactEmail] = useState("");
-  const [contactPhone, setContactPhone] = useState("");
+const EditJobPage = () => {
+  //get the jobloader data
+  const { id } = useParams();
+  const { data, error } = useLoaderData();
+  const apiUrl = `/api/jobListings/${id}`;
+  const [title, setTitle] = useState(data.title);
+  const [type, setType] = useState(data.type);
+  const [location, setLocation] = useState(data.location);
+  const [description, setDescription] = useState(data.description);
+  const [salary, setSalary] = useState(data.salary);
+  const [companyName, setCompanyName] = useState(data.company.name);
+  const [companyDescription, setCompanyDescription] = useState(
+    data.company.description
+  );
+  const [contactEmail, setContactEmail] = useState(data.company.contactEmail);
+  const [contactPhone, setContactPhone] = useState(data.company.contactPhone);
   const navigate = useNavigate();
 
   //function to handleSubmit
@@ -24,7 +29,8 @@ const AddJobPage = () => {
 
     //functionality
     //new obj to submit
-    const newJob = {
+    const updatedJob = {
+      id,
       title,
       type,
       location,
@@ -37,36 +43,33 @@ const AddJobPage = () => {
         contactPhone: contactPhone,
       },
     };
-    console.log(newJob);
-    const postOptionsObj = {
-      method: "POST",
+    console.log(updatedJob);
+    const putOptionsObj = {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newJob),
+      body: JSON.stringify(updatedJob),
     };
 
-    const result = await apiRequest(apiUrl, postOptionsObj);
+    const result = await apiRequest(apiUrl, putOptionsObj);
 
     if (result) {
-      toast.success("Job added successfully"); // gonna toast here
+      toast.success("Job updated successfully"); // gonna toast here
     } else {
-      toast.error("Failed to add job"); // gonna toast here
+      toast.error("Failed to update job"); // gonna toast here
     }
 
-    //clear the form
-    setTitle("");
-    setType("Full-Time");
-    setLocation("");
-    setDescription("");
-    setSalary("Under $50K");
-    setCompanyName("");
-    setCompanyDescription("");
-    setContactEmail("");
-    setContactPhone("");
-
-    navigate("/jobs");
+    navigate(`/jobs/${id}`);
   };
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex justify-center items-center">
+        <h6 className="text-xl font-semibold text-red-500">{error}</h6>
+      </div>
+    );
+  }
 
   return (
     <main
@@ -84,7 +87,7 @@ const AddJobPage = () => {
           <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
             <form onSubmit={handleSubmit}>
               <h2 className="text-3xl text-center font-merriweatherSans font-semibold mb-6">
-                Add Job
+                Edit Job
               </h2>
 
               <div className="mb-4">
@@ -272,16 +275,16 @@ const AddJobPage = () => {
                 />
               </div>
 
-              <div>
+              <div className="w-full flex justify-center">
                 {/* the button */}
                 <Button
-                  text="Add job"
+                  text="Edit job"
                   backgroundColor="bg-blue-500"
                   paddingY="p-2"
                   maxWidth="max-w-full"
                   type={"submit"}
                   hoverColor="hover:bg-blue-700"
-                  icon={FaPlus}
+                  icon={FaPen}
                   iconHoverTextColor="group-hover:text-purple-300"
                   hoverScale={1.01}
                   duration={0.3}
@@ -297,4 +300,4 @@ const AddJobPage = () => {
   );
 };
 
-export default AddJobPage;
+export default EditJobPage;
