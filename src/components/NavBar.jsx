@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
-import LinkButton from "./LinkButton";
+// import LinkButton from "./LinkButton";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { navLinks } from "../constants/navlinks";
 import NavLinkButton from "./NavLinkButton";
